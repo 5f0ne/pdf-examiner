@@ -1,0 +1,152 @@
+[
+    {
+        "name": "obj",
+        "type": "tag",
+        "action": "count",
+        "regexes": ["(?<!end)obj"]
+    },
+    {
+        "name": "endobj",
+        "type": "tag",
+        "action": "count",
+        "regexes": ["endobj"]
+    },
+    {
+        "name": "stream",
+        "type": "tag",
+        "action": "count",
+        "regexes": ["(?<!end)stream"]
+    },
+    {
+        "name": "endstream",
+        "type": "tag",
+        "action": "count",
+        "regexes": ["endstream"]
+    },
+    {
+        "name": "xref",
+        "type": "tag",
+        "action": "count",
+        "regexes": ["(?<!start)xref"]
+    },
+    {
+        "name": "startxref",
+        "type": "tag",
+        "action": "count",
+        "regexes": ["startxref"]
+    },
+    {
+        "name": "trailer",
+        "type": "tag",
+        "action": "count",
+        "regexes": ["trailer"]
+    },
+    {
+        "name": "/Author",
+        "type": "metadata",
+        "action": "value",
+        "regexes": ["/Author\\((.*?)\\)"]
+    },
+    {
+        "name": "/Creator",
+        "type": "metadata",
+        "action": "value",
+        "regexes": ["/Creator\\((.*?)\\)"]
+    },
+    {
+        "name": "/Producer",
+        "type": "metadata",
+        "action": "value",
+        "regexes": ["/Producer\\((.*?)\\)"]
+    },
+    {
+        "name": "/CreationDate",
+        "type": "metadata",
+        "action": "value",
+        "regexes": ["/CreationDate\\((.*?)\\)"]
+    },
+    {
+        "name": "/ModDate",
+        "type": "metadata",
+        "action": "value",
+        "regexes": ["/ModDate\\((.*?)\\)"]
+    },
+    {
+        "name": "/Action",
+        "type": "action",
+        "action": "count",
+        "regexes": ["/Action"]
+    },
+    {
+        "name": "/URI",
+        "type": "action",
+        "action": "count",
+        "regexes": ["/URI"]
+    },
+    {
+        "name": "/URI values",
+        "type": "action",
+        "action": "value",
+        "regexes": ["/URI\\((.*?)\\)"]
+    },
+    {
+        "name": "/OpenAction",
+        "type": "action",
+        "action": "count",
+        "regexes": ["/OpenAction"]
+    },
+    {
+        "name": "/Named",
+        "type": "action",
+        "action": "count",
+        "regexes": ["/Named"]
+    },
+    {
+        "name": "/Launch",
+        "type": "action",
+        "action": "count",
+        "regexes": ["/Launch"]
+    },
+    {
+        "name": "/AcroForm",
+        "type": "action",
+        "action": "count",
+        "regexes": ["/AcroForm"]
+    },
+    {
+        "name": "/JavaScript",
+        "type": "code",
+        "action": "count",
+        "regexes": ["/JavaScript"]
+    },
+    {
+        "name": "/JS",
+        "type": "code",
+        "action": "count",
+        "regexes": ["/JS"]
+    },
+    {
+        "name": "/JS values",
+        "type": "code",
+        "action": "value",
+        "regexes": ["/JS\\((.*?)\\)"]
+    },
+    {
+        "name": "/RichMedia",
+        "type": "embedded",
+        "action": "count",
+        "regexes": ["/RichMedia"]
+    },
+    {
+        "name": "/EmbeddedFile",
+        "type": "embedded",
+        "action": "count",
+        "regexes": ["/EmbeddedFile"]
+    },
+    {
+        "name": "/Encrypt",
+        "type": "embedded",
+        "action": "count",
+        "regexes": ["/Encrypt"]
+    }
+]
