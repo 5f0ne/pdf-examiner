@@ -4,9 +4,9 @@ import time
 
 from datetime import datetime
 
-from src.Action import Action
-from src.FileResult import FileResult
-from src.PatternResult import PatternResult
+from pdf_examiner.Action import Action
+from pdf_examiner.FileResult import FileResult
+from pdf_examiner.PatternResult import PatternResult
 
 class Controller():
     def __init__(self, patterns) -> None:

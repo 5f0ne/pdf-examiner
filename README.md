@@ -5,7 +5,8 @@ Provides an overview of the inner file structure of a PDF and extracts /URI and 
 # Configuration
 
 `options.json` contains the rules for searching the PDF document.
-If you want to have additional information, just add a new object to this file. The following provides an example of an object:
+If you want to have additional information, just add a new object to this file. 
+The following provides an example of an object:
 
 ```json
 [
@@ -32,7 +33,9 @@ If you want to have additional information, just add a new object to this file. 
 
 # Usage
 
-`main.py [-h] --path PATH`
+**From command line:**
+
+`python -m pdf_investigator [-h] --path PATH`
 
 | Option | Short | Type | Default | Description |
 |---|---|---|---|---|
@@ -41,7 +44,7 @@ If you want to have additional information, just add a new object to this file. 
 
 # Example
 
-`python main.py -p "path/to/pdf" > result.txt`
+`python -m pdf_investigator -p "path/to/pdf" > result.txt`
 
 You can find the following result [here](./example/example.txt):
 

@@ -1,22 +1,21 @@
 import hashlib
 
-from src.Type import Type
+from hash_calc.HashCalc import HashCalc
+from pdf_examiner.Type import Type
 
 class FileResult():
     def __init__(self, fileName) -> None:
         self.fileName = fileName
         self.patternResults = []
-        self.md5 = "-"
-        self.sha256 = "-"
-        self.__calculateFileHash()
+        self.hashCalc = HashCalc(fileName)
         self.pdfVersion = ""
 
     def print(self):
         print("")
         print("Examined file: " + self.fileName)
         print("")
-        print("     MD5 Hash: " + self.md5)
-        print("  SHA256 Hash: " + self.sha256)
+        print("     MD5 Hash: " + self.hashCalc.md5)
+        print("  SHA256 Hash: " + self.hashCalc.sha256)
         print("")
         print("--> Version: " + self.__getVersion())
         self.__printTypes(Type.METADATA, "--> Metadata")
@@ -41,20 +40,3 @@ class FileResult():
             if(pR.type == type_):
                 formatStr = "{:20}: {}"
                 print(formatStr.format(pR.name, str(pR.result)))
-
-
-    def __calculateFileHash(self):
-
-        sha256 = hashlib.sha256()
-        md5 = hashlib.md5()
-
-        with open(self.fileName, "rb") as f:
-            while True:
-                data = f.read(65536) 
-                if not data:
-                    break
-                sha256.update(data)
-                md5.update(data)
-
-        self.sha256 = sha256.hexdigest()
-        self.md5 = md5.hexdigest()
